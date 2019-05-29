@@ -1,0 +1,102 @@
+{
+  "Vue Prop Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-prop",
+    "body": ["@Prop($0) readonly ${1:variable}!: ${2:type};"],
+    "description": "Prop Vue Decorator"
+  },
+  "Vue Prop Decorator Default Value": {
+    "scope": "typescript",
+    "prefix": "vuedec-propDefault",
+    "body": [
+      "@Prop({ default: ${3:default_value} }) readonly ${1:variable}!: ${2:type};"
+    ],
+    "description": "Prop Vue Decorator Default Value"
+  },
+  "Import Vue Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-import",
+    "body": [
+      "import { Vue, Component, Prop, Watch, Emit } from \"vue-property-decorator\";"
+    ],
+    "description": "Import Vue Decorator"
+  },
+  "Vue New Component with Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-comp",
+    "body": [
+      "@Component",
+      "export default class ${1:component_name} extends Vue {",
+      "\t$0",
+      "}"
+    ],
+    "description": "New component with vue-decorator"
+  },
+  "Vue New File with Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-newComp",
+    "body": [
+      "import { Vue, Component, Prop, Watch, Emit } from \"vue-property-decorator\";",
+      "",
+      "@Component",
+      "export default class ${1:component_name} extends Vue {",
+      "\t$0",
+      "}"
+    ],
+    "description": "New component with vue-decorator"
+  },
+  "Data Vue Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-data",
+    "body": ["${1:variable}: ${2:type} = ${3:default_value};"],
+    "description": "Declare new data variable"
+  },
+  "Vue Watch with Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-watch",
+    "body": [
+      "@Watch(\"${1:variableToWatch}\")",
+      "on${1/(.*)/${1:/capitalize}/}Changed(val: ${2:type}, oldVal: ${2}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Declare new watch method"
+  },
+  "Vuex Module": {
+    "scope": "typescript",
+    "prefix": "vuexdec-module",
+    "body": [
+      "import { Module, VuexModule, Mutation, Action, MutationAction } from \"vuex-module-decorators\";",
+      "",
+      "@Module",
+      "export default class ${1:MyModule} extends VuexModule {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Declare a vuex store's module using decorators"
+  },
+  "Vuex Dynamic Module": {
+    "scope": "typescript",
+    "prefix": "vuexdec-dynamicModule",
+    "body": [
+      "import store from \"@/store\";",
+      "import { Module, VuexModule, Mutation, Action, MutationAction } from \"vuex-module-decorators\";",
+      "",
+      "@Module({ dynamic: true, store, name: \"${1:moduleName}\"})",
+      "export default class ${2:MyModule} extends VuexModule {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Declare a vuex store's dynamic module using decorators"
+  },
+  "Vuex Mutation": {
+    "scope": "typescript",
+    "prefix": "vuexdec-mutation",
+    "body": [
+      "@Mutation",
+      "${1:myMutation}(${2:payload}: ${3:any}) {",
+      "\t$0",
+      "}"
+    ]
+  }
+}
