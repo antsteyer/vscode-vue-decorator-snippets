@@ -1,20 +1,27 @@
 {
-    "name": "vue-property-decorator-snippets",
-    "displayName": "Vue Property Decorator Snippets",
-    "description": "Usefull snippets to work with decorators in Vue and typescript files",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.34.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "typescript",
-                "path": "./snippets/snippets.json"
-            }
-        ]
-    }
+  "name": "vue-property-decorator-snippets",
+  "displayName": "Vue Property Decorator Snippets",
+  "icon": "images/logo.png",
+  "publisher": "antsteyer",
+  "description": "Usefull snippets to work with decorators in Vue and typescript files",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antsteyer/vscode-vue-decorator-snippets.git"
+  },
+  "homepage": "https://github.com/antsteyer/vscode-vue-decorator-snippets/blob/master/README.md"
 }
