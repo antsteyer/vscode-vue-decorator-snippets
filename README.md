@@ -12,6 +12,10 @@ This extension adds Vue Property Decorator Code snippets into Visual Studio Code
 | `vuedec-prop`    | `@Prop() readonly variable!: type;`                                           |
 | `vuedec-data`    | `variable: type = defaultValue;`                                              |
 | `vuedec-watch`   | `@Watch(variableToWatch) onVariableChanged(val: type, oldVal; type) {...}`    |
+| `vuedec-model`   | `@Model() readonly variable!: type;`                                          |
+| `vuedec-prov`    | `@Provide() variable = value;`                                                |
+| `vuedec-inject`  | `@Inject() readonly variable!: type;`                                         |
+| `vuedec-emit`    | `@Emit(event) myMethod() { ... }`                                             |
 
 <br />
 
@@ -37,6 +41,15 @@ Not yet.
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.3
+
+Add snippets for :
+
+- `@Model`
+- `@Inject`
+- `@Provide`
+- `@Emit`
+
+### 0.0.1
 
 Initial release of Vue Property Decorator Snippets
