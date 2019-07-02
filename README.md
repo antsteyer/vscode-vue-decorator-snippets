@@ -4,18 +4,22 @@ This extension adds Vue Property Decorator Code snippets into Visual Studio Code
 
 ## Features
 
-| Prefix           | Vue Property Decorator Snippet Content                                        |
-| ---------------- | ----------------------------------------------------------------------------- |
-| `vuedec-import`  | `import { Vue, Component, Prop, Watch, Emit } from "vue-property-decorator";` |
-| `vuedec-comp`    | `@Component export default class Compenent extends Vue {...}`                 |
-| `vuedec-newComp` | `Equivalent to vuedec-import and vuedec-comp`                                 |
-| `vuedec-prop`    | `@Prop() readonly variable!: type;`                                           |
-| `vuedec-data`    | `variable: type = defaultValue;`                                              |
-| `vuedec-watch`   | `@Watch(variableToWatch) onVariableChanged(val: type, oldVal; type) {...}`    |
-| `vuedec-model`   | `@Model() readonly variable!: type;`                                          |
-| `vuedec-prov`    | `@Provide() variable = value;`                                                |
-| `vuedec-inject`  | `@Inject() readonly variable!: type;`                                         |
-| `vuedec-emit`    | `@Emit(event) myMethod() { ... }`                                             |
+| Prefix               | Vue Property Decorator Snippet Content                                             | Doc                                                                                                                                                                  |
+| -------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `vuedec-import`      | `import { Vue, Component, Prop, Watch, Emit, Ref } from "vue-property-decorator";` |                                                                                                                                                                      |
+| `vuedec-comp`        | `@Component export default class Compenent extends Vue {...}`                      |                                                                                                                                                                      |
+| `vuedec-newComp`     | `Equivalent to vuedec-import and vuedec-comp`                                      |                                                                                                                                                                      |
+| `vuedec-prop`        | `@Prop() readonly variable!: type;`                                                | [→](https://github.com/kaorun343/vue-property-decorator#-propoptions-propoptions--constructor--constructor---decorator)                                              |
+| `vuedec-propsync`    | `@PropSync('name', { type: type }) variable!: type;`                               | [→](https://github.com/kaorun343/vue-property-decorator#-propsyncpropname-string-options-propoptions--constructor--constructor---decorator)                          |
+| `vuedec-data`        | `variable: type = defaultValue;`                                                   |                                                                                                                                                                      |
+| `vuedec-watch`       | `@Watch(variableToWatch) onVariableChanged(val: type, oldVal; type) {...}`         | [→](https://github.com/kaorun343/vue-property-decorator#-watchpath-string-options-watchoptions---decorator)                                                          |
+| `vuedec-model`       | `@Model() readonly variable!: type;`                                               | [→](https://github.com/kaorun343/vue-property-decorator#-modelevent-string-options-propoptions--constructor--constructor---decorator)                                |
+| `vuedec-prov`        | `@Provide() variable = value;`                                                     | [→](https://github.com/kaorun343/vue-property-decorator#-providekey-string--symbol--injectoptions--from-injectkey-default-any---injectkey-decorator)                 |
+| `vuedec-provreact`   | `@ProvideReactive() variable = value;`                                             | [→](https://github.com/kaorun343/vue-property-decorator#-providereactivekey-string--symbol--injectreactiveoptions--from-injectkey-default-any---injectkey-decorator) |
+| `vuedec-inject`      | `@Inject() readonly variable!: type;`                                              | [→](https://github.com/kaorun343/vue-property-decorator#-providekey-string--symbol--injectoptions--from-injectkey-default-any---injectkey-decorator)                 |
+| `vuedec-injectreact` | `@InjectReactive() variable!: type;`                                               | [→](https://github.com/kaorun343/vue-property-decorator#-providereactivekey-string--symbol--injectreactiveoptions--from-injectkey-default-any---injectkey-decorator) |
+| `vuedec-emit`        | `@Emit(event) myMethod() { ... }`                                                  | [→](https://github.com/kaorun343/vue-property-decorator#-emitevent-string-decorator)                                                                                 |
+| `vuedec-ref`         | `@Ref() readonly aComponent!: AComponent`                                          | [→](https://github.com/kaorun343/vue-property-decorator#-refrefkey-string-decorator)                                                                                 |
 
 <br />
 
@@ -41,15 +45,4 @@ Not yet.
 
 ## Release Notes
 
-### 0.0.3
-
-Add snippets for :
-
-- `@Model`
-- `@Inject`
-- `@Provide`
-- `@Emit`
-
-### 0.0.1
-
-Initial release of Vue Property Decorator Snippets
+Check [CHANGELOG.md](https://github.com/antsteyer/vscode-vue-decorator-snippets/blob/master/CHANGELOG.md)
