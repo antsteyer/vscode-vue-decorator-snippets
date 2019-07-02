@@ -13,11 +13,19 @@
     ],
     "description": "Prop Vue Decorator Default Value"
   },
+  "Vue PropSync Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-propsync",
+    "body": [
+      "@PropSync(${3:name}, { type: ${2/(.*)/${2:/capitalize}/} }) ${1:variable}!: ${2:type};"
+    ],
+    "description": "PropSync Vue Decorator"
+  },
   "Import Vue Decorator": {
     "scope": "typescript",
     "prefix": "vuedec-import",
     "body": [
-      "import { Vue, Component, Prop, Watch, Emit } from \"vue-property-decorator\";"
+      "import { Vue, Component, Prop, Watch, Emit, Ref } from \"vue-property-decorator\";"
     ],
     "description": "Import Vue Decorator"
   },
@@ -36,7 +44,7 @@
     "scope": "typescript",
     "prefix": "vuedec-newComp",
     "body": [
-      "import { Vue, Component, Prop, Watch, Emit } from \"vue-property-decorator\";",
+      "import { Vue, Component, Prop, Watch, Emit, Ref } from \"vue-property-decorator\";",
       "",
       "@Component",
       "export default class ${1:component_name} extends Vue {",
@@ -74,17 +82,34 @@
     "body": ["@Provide($3) ${1:variable} = ${2:value};$0"],
     "description": "Declare new provide"
   },
+  "Vue Provide Reactive with Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-provreact",
+    "body": ["@ProvideReactive($3) ${1:variable} = ${2:value};$0"],
+    "description": "Declare new reactive provide"
+  },
   "Vue Inject with Decorator": {
     "scope": "typescript",
     "prefix": "vuedec-inject",
     "body": ["@Inject($3) readonly ${1:variable}!: ${2:type};$0"],
     "description": "Declare new inject"
   },
+  "Vue Inject reactive with Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-injectreact",
+    "body": ["@InjectReactive($3) ${1:variable}!: ${2:type};$0"],
+    "description": "Declare new reactive inject"
+  },
   "Vue Emit with Decorator": {
     "scope": "typescript",
     "prefix": "vuedec-emit",
     "body": ["@Emit(${3})", "${1:myMethod}(${2}) {", "\t$0", "}"],
     "description": "Declare new emit method"
+  },
+  "Vue Ref with Decorator": {
+    "scope": "typescript",
+    "prefix": "vuedec-ref",
+    "body": ["@Ref($3) readonly ${1:aComponent}!: ${2:AComponent};${0}"]
   },
   "Vuex Module": {
     "scope": "typescript",
